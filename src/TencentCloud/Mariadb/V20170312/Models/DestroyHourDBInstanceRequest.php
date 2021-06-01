@@ -18,28 +18,20 @@ namespace TencentCloud\Mariadb\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * RestartDBInstances请求参数结构体
+ * DestroyHourDBInstance请求参数结构体
  *
- * @method array getInstanceIds() 获取实例ID的数组
- * @method void setInstanceIds(array $InstanceIds) 设置实例ID的数组
- * @method string getRestartTime() 获取重启时间
- * @method void setRestartTime(string $RestartTime) 设置重启时间
+ * @method string getInstanceId() 获取实例 ID，格式如：tdsql-avw0207d，与云数据库控制台页面中显示的实例 ID 相同。
+ * @method void setInstanceId(string $InstanceId) 设置实例 ID，格式如：tdsql-avw0207d，与云数据库控制台页面中显示的实例 ID 相同。
  */
-class RestartDBInstancesRequest extends AbstractModel
+class DestroyHourDBInstanceRequest extends AbstractModel
 {
     /**
-     * @var array 实例ID的数组
+     * @var string 实例 ID，格式如：tdsql-avw0207d，与云数据库控制台页面中显示的实例 ID 相同。
      */
-    public $InstanceIds;
+    public $InstanceId;
 
     /**
-     * @var string 重启时间
-     */
-    public $RestartTime;
-
-    /**
-     * @param array $InstanceIds 实例ID的数组
-     * @param string $RestartTime 重启时间
+     * @param string $InstanceId 实例 ID，格式如：tdsql-avw0207d，与云数据库控制台页面中显示的实例 ID 相同。
      */
     function __construct()
     {
@@ -54,12 +46,8 @@ class RestartDBInstancesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceIds",$param) and $param["InstanceIds"] !== null) {
-            $this->InstanceIds = $param["InstanceIds"];
-        }
-
-        if (array_key_exists("RestartTime",$param) and $param["RestartTime"] !== null) {
-            $this->RestartTime = $param["RestartTime"];
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
         }
     }
 }

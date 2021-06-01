@@ -18,28 +18,28 @@ namespace TencentCloud\Mariadb\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * RestartDBInstances请求参数结构体
+ * 数据库账号信息
  *
- * @method array getInstanceIds() 获取实例ID的数组
- * @method void setInstanceIds(array $InstanceIds) 设置实例ID的数组
- * @method string getRestartTime() 获取重启时间
- * @method void setRestartTime(string $RestartTime) 设置重启时间
+ * @method string getUser() 获取账户的名称
+ * @method void setUser(string $User) 设置账户的名称
+ * @method string getHost() 获取账户的域名
+ * @method void setHost(string $Host) 设置账户的域名
  */
-class RestartDBInstancesRequest extends AbstractModel
+class Account extends AbstractModel
 {
     /**
-     * @var array 实例ID的数组
+     * @var string 账户的名称
      */
-    public $InstanceIds;
+    public $User;
 
     /**
-     * @var string 重启时间
+     * @var string 账户的域名
      */
-    public $RestartTime;
+    public $Host;
 
     /**
-     * @param array $InstanceIds 实例ID的数组
-     * @param string $RestartTime 重启时间
+     * @param string $User 账户的名称
+     * @param string $Host 账户的域名
      */
     function __construct()
     {
@@ -54,12 +54,12 @@ class RestartDBInstancesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceIds",$param) and $param["InstanceIds"] !== null) {
-            $this->InstanceIds = $param["InstanceIds"];
+        if (array_key_exists("User",$param) and $param["User"] !== null) {
+            $this->User = $param["User"];
         }
 
-        if (array_key_exists("RestartTime",$param) and $param["RestartTime"] !== null) {
-            $this->RestartTime = $param["RestartTime"];
+        if (array_key_exists("Host",$param) and $param["Host"] !== null) {
+            $this->Host = $param["Host"];
         }
     }
 }

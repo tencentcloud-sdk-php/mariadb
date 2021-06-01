@@ -18,28 +18,28 @@ namespace TencentCloud\Mariadb\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * RestartDBInstances请求参数结构体
+ * 数据库权限
  *
- * @method array getInstanceIds() 获取实例ID的数组
- * @method void setInstanceIds(array $InstanceIds) 设置实例ID的数组
- * @method string getRestartTime() 获取重启时间
- * @method void setRestartTime(string $RestartTime) 设置重启时间
+ * @method array getPrivileges() 获取权限信息
+ * @method void setPrivileges(array $Privileges) 设置权限信息
+ * @method string getDatabase() 获取数据库名
+ * @method void setDatabase(string $Database) 设置数据库名
  */
-class RestartDBInstancesRequest extends AbstractModel
+class DatabasePrivilege extends AbstractModel
 {
     /**
-     * @var array 实例ID的数组
+     * @var array 权限信息
      */
-    public $InstanceIds;
+    public $Privileges;
 
     /**
-     * @var string 重启时间
+     * @var string 数据库名
      */
-    public $RestartTime;
+    public $Database;
 
     /**
-     * @param array $InstanceIds 实例ID的数组
-     * @param string $RestartTime 重启时间
+     * @param array $Privileges 权限信息
+     * @param string $Database 数据库名
      */
     function __construct()
     {
@@ -54,12 +54,12 @@ class RestartDBInstancesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceIds",$param) and $param["InstanceIds"] !== null) {
-            $this->InstanceIds = $param["InstanceIds"];
+        if (array_key_exists("Privileges",$param) and $param["Privileges"] !== null) {
+            $this->Privileges = $param["Privileges"];
         }
 
-        if (array_key_exists("RestartTime",$param) and $param["RestartTime"] !== null) {
-            $this->RestartTime = $param["RestartTime"];
+        if (array_key_exists("Database",$param) and $param["Database"] !== null) {
+            $this->Database = $param["Database"];
         }
     }
 }
